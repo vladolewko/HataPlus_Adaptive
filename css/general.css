@@ -51,6 +51,7 @@ nav {
 .navigationbottom{
     display: flex;
     justify-content: space-around;
+    column-gap: 30px;
         flex-wrap: wrap;
 }
 .burger{
