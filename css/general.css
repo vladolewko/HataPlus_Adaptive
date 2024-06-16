@@ -58,6 +58,7 @@ nav {
     position: relative;
     width: 30px;
     height: 30px;
+    transition: .3s;
    
 }
 .burger span{
@@ -89,7 +90,8 @@ background-color: #fd8300;
     background-color: #fd8300;
     transition: .5s;
 } 
-.clicked:hover span{
+
+/* .clicked:hover span{
     transform: rotate(90deg);
 }
 .clicked:hover::before{
@@ -101,28 +103,38 @@ background-color: #fd8300;
 .clicked:hover::after{
     top: 50%;
     left: 0;
+    transform: rotate(90deg);  
+} */
+.clicked:hover{
     transform: rotate(90deg);
-   
 }
 .onclick{
     position: absolute;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
     top: 100%;
     left: 0;
-    padding: 20px 10px;
-    width: 50%;
-    background-color: #1f1f56;
+    padding: 20px 15px;
+    width: 70%;
+    background-color: #2e2e73;
     z-index: 2;
     transition: .4s;
     border-radius: 0 0 10px 0;
+    border-bottom: 3px #1f1f56 solid;
+    border-right: 3px #1f1f56 solid;
+    
 }
-
+.navigation{
+    transition: .3s;
+}
 
 
 .social ul {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    column-gap: 22px;
+    gap: 12px;
     align-items: center;
 }
 
@@ -330,10 +342,12 @@ a.skype:before {
     }
     .mainmenu{
         display: flex;
-        column-gap: 25px;
+        gap: 25px;
     }
     .socials{
         display: flex;
+        flex-direction: row;
+        gap: 22px;
     }
    
 }
