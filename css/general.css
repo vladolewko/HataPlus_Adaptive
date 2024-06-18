@@ -130,7 +130,7 @@ background-color: #fd8300;
 }
 
 
-.social ul {
+.socials {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -338,6 +338,11 @@ a.skype:before {
         column-gap: 30px;
         justify-content: center;
         flex-wrap: wrap;
+
+    }
+    .socials{
+        display: flex;
+        flex-direction: row;
 
     }
     .mainmenu{
