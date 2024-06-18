@@ -325,6 +325,14 @@ a.skype:before {
 
 @media screen and (min-width:600px) {
     
+
+    .email{
+        text-align: left;
+    }
+   
+   
+}
+@media screen and (min-width:720px) {
     .header-info{
         display: flex;
         flex-direction: row;
@@ -339,9 +347,6 @@ a.skype:before {
         flex-direction: row;
 
     }
-    .email{
-        text-align: left;
-    }
     .mainmenu{
         display: flex;
         gap: 25px;
@@ -351,10 +356,6 @@ a.skype:before {
         flex-direction: row;
         gap: 22px;
     }
-   
-}
-@media screen and (min-width:720px) {
-
     .burger{
         display: none;
     }
