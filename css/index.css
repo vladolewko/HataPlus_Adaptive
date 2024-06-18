@@ -264,6 +264,13 @@ aside li li:hover a {
     color: #666;
     background-color: #cecedd;
 }
+aside li:last-child{
+    border-radius: 0 0 3px 3px;
+}
+aside li:last-child li:last-child a{
+    border-radius: 0 0 3px 3px;
+
+}
 
 @media screen and (min-width:600px) {
     h1{

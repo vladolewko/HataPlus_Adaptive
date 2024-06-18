@@ -25,7 +25,12 @@ sup {
     font-size: 0.6em;
 }
 
-
+header{
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.header-info{
+    margin-bottom: 40px;
+}
 
 h1 {
     margin-bottom: 27px;
