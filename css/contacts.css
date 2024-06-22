@@ -118,12 +118,17 @@ form {
 
 .row {
     display: flex;
-    column-gap: 10px;
+   gap: 10px;
+    flex-wrap: wrap;
 
 }
 
 .row p {
     flex-grow: 1;
+} 
+.phenefield,
+.namefield{
+    width: 100%;
 }
 
 
@@ -191,7 +196,7 @@ border: 1.5px #fd8300 solid;
     display: flex;
     align-items: center;
     column-gap: 10px;
-    margin-left: 30px;
+   text-align: center;
     width: 100%;
 
 }
@@ -238,23 +243,34 @@ font-family: "Arial";
          width: 48%;
     }
     .map {
-
- width: 49%;
-     
+    width: 49%;
+    
     }
 
-    .button+label{
-      width: 40%
-
-    }
     .last{
         display: block;
     }
-    .last p:first-child{
-       display: inline;
-    }
-    .checkbox{
-        display: inline-block;
-        width: inherit;
-    }
+ 
+    
+}
+@media screen and (min-width:1024px) {
+    
+    .phenefield,
+.namefield{
+    width: inherit;
+}
+.row{
+    flex-wrap: nowrap;
+}
+.button+label{
+    width: 40%
+
+  }
+  .last p{
+ width: 40%;
+  }
+  .last input+label{
+    width: 100%;
+  }
+ 
 }
