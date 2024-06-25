@@ -14,8 +14,8 @@ body {
 
 .wrapper {
     margin: auto;
-    width: 90%;
     max-width: 960px;
+    width: 90%;
 }
 
 li {
@@ -34,20 +34,10 @@ nav {
 
 }
 
-
-.socials {
-    display: flex;
-    justify-content: space-around;
-    gap: 22px;
-}
-
 .navigation {
     display: none;
- 
+
 }
-
-
-
 
 .burger {
     position: absolute;
@@ -62,41 +52,37 @@ span {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translate(0, -50%);
     width: 100%;
     height: 7px;
+    transform: translate(0, -50%);
     background-color: #fff;
     border-radius: 2px;
 }
 
-.burger::before {
+.burger::before,
+.burger::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 7px;
-    background-color: #fff;
+    left: 0;
     border-radius: 2px;
+    background-color: #fff;
+}
+
+.burger::before {
+    top: 0;
 
 }
 
 .burger::after {
-    content: "";
-    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 7px;
-    background-color: #fff;
-    border-radius: 2px;
 
 }
 
 .touched {
     position: absolute;
     top: 13px;
-
     left: 15px;
     transform: rotate(180deg);
     transition: .5s;
@@ -108,10 +94,10 @@ span {
 }
 
 .touched::after {
-
     width: 120%;
     top: 15px;
     transform: rotate(-45deg);
+
 }
 
 .touched::before {
@@ -121,37 +107,38 @@ span {
 .opened {
     display: flex;
     flex-direction: column;
-  animation: slide 1s linear forwards;
-  position: absolute;
+    padding: 15px;
+    width: 75%;
+    position: absolute;
     top: 50px;
     left: 50%;
+    animation: slide 1s linear forwards;
     transform: translate(-50%, 0);
-    width: 75%;
-    padding: 15px;
     border-radius: 0 0 10px 10px;
     background-color: #242475;
     z-index: 1;
 
 }
 
-@keyframes slide{
-    0%{
+@keyframes slide {
+    0% {
         display: none;
         opacity: 0;
         transform: translate(-50%, -150%);
     }
-    1%{
+
+    1% {
 
         display: flex;
         flex-direction: column;
     }
-    100%{
+
+    100% {
         display: flex;
         opacity: 1;
         transform: translate(-50%, 0);
-        
-    }
 
+    }
 }
 
 nav li {
@@ -186,11 +173,11 @@ nav li {
     flex-wrap: wrap;
 }
 
+
 .socials {
     display: flex;
-
+    justify-content: center;
     column-gap: 32px;
-    align-items: center;
 }
 
 .socials a {
@@ -234,37 +221,33 @@ a.inst {
 .header-info {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
     align-items: center;
-    text-align: center;
+    row-gap: 20px;
     padding: 30px 0;
+    text-align: center;
 }
+
 .header-info div,
-.navigationbottom div{
-margin: auto;
+.navigationbottom div {
+    margin: auto;
 }
 
-
-
-.phn{
+.phn {
     position: relative;
 }
 
 a.phn:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -30px;
     width: 19px;
     height: 21px;
+    top: 0;
+    left: -30px;
     background: url(../img/icons.png), no-repeat;
     background-position: -62px 0;
 }
 
-
-
 .phone a {
-
     color: #25252c;
     font-size: 18px;
     font-weight: bold;
@@ -278,8 +261,9 @@ a.phn:before {
 .email p:first-child {
     margin-bottom: 8px;
 }
+
 .phone p,
-.email p{
+.email p {
     padding-left: 30px;
 }
 
@@ -290,17 +274,19 @@ a.phn:before {
     font-family: "Arial";
     transition: .3s;
 }
-.eml{
+
+.eml {
     position: relative;
 
 }
+
 a.eml:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -30px;
     width: 21px;
     height: 15px;
+    top: 0;
+    left: -30px;
     background: url(../img/icons.png), no-repeat;
     background-position: -84px 0;
 }
@@ -308,17 +294,18 @@ a.eml:before {
 a.skype {
     text-decoration: none;
 }
-.skype{
+
+.skype {
     position: relative;
 }
 
 a.skype:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -30px;
     width: 21px;
     height: 21px;
+    top: 0;
+    left: -30px;
     background: url(../img/icons.png), no-repeat;
     background-position: -106px 0;
 }
@@ -364,7 +351,8 @@ a.skype:before {
     text-decoration: underline;
     transition: .3s;
 }
-.minw{
+
+.minw {
     min-width: 220px;
     text-align: center;
 }
@@ -390,8 +378,6 @@ a.skype:before {
     .opened {
         width: 50%;
     }
-
-
 }
 
 @media screen and (min-width:720px) {
@@ -414,7 +400,6 @@ a.skype:before {
         flex-wrap: wrap;
 
     }
-
 }
 
 @media screen and (min-width:1024px) {
@@ -424,38 +409,33 @@ a.skype:before {
     }
 
     .mainmenu {
+        margin: 0;
         display: flex;
         gap: 25px;
-        margin: 0;
     }
 
     .burger {
         display: none;
     }
 
-    .navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
+    .navigation,
     .header-info {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .minw{
+    .minw {
         text-align: start;
 
     }
-
 }
 
 @media screen and (min-width:1126px) {
-    .header-info{
+    .header-info {
         position: relative;
     }
+
     .header-info::before {
         content: '';
         position: absolute;
@@ -465,7 +445,8 @@ a.skype:before {
         top: calc(50% - 25px);
         left: 50%;
     }
-    .header-info div.buttoncall{
+
+    .header-info div.buttoncall {
         margin: 0;
     }
 
