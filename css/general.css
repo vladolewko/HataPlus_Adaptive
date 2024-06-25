@@ -176,9 +176,14 @@ nav li {
 
 .socials {
     display: flex;
-    justify-content: center;
+    text-align: center;
     column-gap: 32px;
 }
+.socials li{
+    display: flex;
+    align-items: center;
+}
+
 
 .socials a {
     display: block;
