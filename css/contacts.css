@@ -72,6 +72,7 @@ h1 {
     padding-bottom: 33px;
     margin-bottom: 36px;
     border-bottom: 1px #e4e4ec solid;
+
 }
 
 .contact {
@@ -262,15 +263,18 @@ font-family: "Arial";
 .row{
     flex-wrap: nowrap;
 }
+.last{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
 .button+label{
-    width: 40%
+    margin: 0;
+}
 
-  }
-  .last p{
- width: 40%;
-  }
-  .last input+label{
-    width: 100%;
-  }
+.checkbox{
+    width: 40%;
+    text-align: left;
+}
  
 }

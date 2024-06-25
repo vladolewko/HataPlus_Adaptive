@@ -59,10 +59,10 @@ nav {
 }
 
 .cost {
-     display: flex;
+    display: flex;
     justify-content: center;
-    align-items: flex-end; 
- } 
+    align-items: flex-end;
+}
 
 .price {
     color: #fd8300;
@@ -90,12 +90,14 @@ h1 {
 }
 
 .mainpart {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
     padding-top: 36px;
 }
-article{
+
+article {
     width: 100%;
 }
 
@@ -118,8 +120,9 @@ article a {
 article a:hover {
     text-decoration: none;
 }
-figure{
-width: 100%;
+
+figure {
+    width: 100%;
 }
 
 .popular {
@@ -134,7 +137,8 @@ width: 100%;
     font-weight: 700;
     font-family: "Roboto Slab";
 }
-.popular h2{
+
+.popular h2 {
     margin-bottom: 25px;
     color: #24242b;
     font-size: 24px;
@@ -142,12 +146,12 @@ width: 100%;
     font-family: "Roboto Slab";
 }
 
- .examples {
-     display: flex;
-    justify-content: space-between; 
+.examples {
+    display: flex;
+    justify-content: space-between;
     row-gap: 30px;
     flex-wrap: wrap;
- }
+}
 
 .examples a {
     text-decoration: underline;
@@ -175,10 +179,28 @@ width: 100%;
     display: inline-block;
     margin-bottom: 15px;
     width: 100%;
-   
+
+}
+
+figure {
+    position: relative;
+}
+
+figure a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+figure a:hover~h2 {
+    text-decoration: underline;
 }
 
 aside {
+    position: sticky;
+    top: 40px;
     width: 100%;
     margin-bottom: 20px;
     overflow: hidden;
@@ -212,13 +234,15 @@ aside a {
 aside li {
     border-top: 1px solid #cdcddd;
     list-style: none;
-   
- background-color: #e4e4ec;
+
+    background-color: #e4e4ec;
 }
-.outside{
+
+.outside {
     position: relative;
 }
- .outside:before {
+
+.outside:before {
     content: "";
     position: absolute;
     top: 17px;
@@ -231,9 +255,10 @@ aside li {
 
 aside li ul {
     display: none;
-   
+
 }
-aside ul ul a{
+
+aside ul ul a {
     padding-left: 30px;
 }
 
@@ -264,47 +289,46 @@ aside li li:hover a {
     color: #666;
     background-color: #cecedd;
 }
-aside li:last-child{
+
+aside li:last-child {
     border-radius: 0 0 3px 3px;
 }
-aside li:last-child li:last-child a{
+
+aside li:last-child li:last-child a {
     border-radius: 0 0 3px 3px;
 
 }
 
 @media screen and (min-width:600px) {
-    h1{
+    h1 {
         font-size: 30px;
         text-align: start;
     }
+
     .examples {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        gap: 25px;
         flex-wrap: wrap;
     }
-    figure{
+
+    figure {
         max-width: 30%;
     }
 
-   
-   
-    
 }
+
 @media screen and (min-width:1024px) {
-
-
-
-    .mainpart{
+    .mainpart {
         justify-content: space-between;
 
     }
-    .inform-and-popular{
-        max-width: 65%;
+
+    .inform-and-popular {
+        max-width: 75%;
     }
-    aside{
-        max-width: 30%;
+
+    aside {
+        max-width: 23%;
     }
 }
-
-
-

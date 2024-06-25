@@ -15,6 +15,7 @@ body {
 .wrapper {
     margin: auto;
     width: 90%;
+    max-width: 960px;
 }
 
 li {
@@ -25,7 +26,7 @@ sup {
     font-size: 0.6em;
 }
 
-nav{
+nav {
     text-align: center;
     padding: 0;
     padding: 25px;
@@ -34,15 +35,21 @@ nav{
 }
 
 
-.socials{
+.socials {
     display: flex;
     justify-content: space-around;
     gap: 22px;
 }
-.navigation{
+
+.navigation {
     display: none;
+ 
 }
-.burger{
+
+
+
+
+.burger {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -50,7 +57,8 @@ nav{
     left: 20px;
     transition: .5s;
 }
-span{
+
+span {
     position: absolute;
     top: 50%;
     left: 0;
@@ -60,7 +68,8 @@ span{
     background-color: #fff;
     border-radius: 2px;
 }
-.burger::before{
+
+.burger::before {
     content: "";
     position: absolute;
     top: 0;
@@ -71,7 +80,8 @@ span{
     border-radius: 2px;
 
 }
-.burger::after{
+
+.burger::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -82,47 +92,73 @@ span{
     border-radius: 2px;
 
 }
-.touched{
+
+.touched {
     position: absolute;
     top: 13px;
-    left: inherit;
-    right: 15px;
+
+    left: 15px;
     transform: rotate(180deg);
     transition: .5s;
 }
-.touched span{
+
+.touched span {
     width: 120%;
     transform: rotate(45deg);
 }
 
-.touched::after{
+.touched::after {
 
     width: 120%;
     top: 15px;
     transform: rotate(-45deg);
 }
-.touched::before{
+
+.touched::before {
     display: none;
 }
 
-.opened{
-    position: absolute;
+.opened {
+    display: flex;
+    flex-direction: column;
+  animation: slide 1s linear forwards;
+  position: absolute;
     top: 50px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 75%;
-display: flex;
-flex-direction: column;
-padding: 15px;
-border-radius: 0 0 10px 10px;
-background-color: #242475;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    background-color: #242475;
+    z-index: 1;
 
-} 
+}
 
-nav li{
+@keyframes slide{
+    0%{
+        display: none;
+        opacity: 0;
+        transform: translate(-50%, -150%);
+    }
+    1%{
+
+        display: flex;
+        flex-direction: column;
+    }
+    100%{
+        display: flex;
+        opacity: 1;
+        transform: translate(-50%, 0);
+        
+    }
+
+}
+
+nav li {
     margin-bottom: 12px;
 }
-.mainmenu{
+
+.mainmenu {
     margin-bottom: 32px;
 }
 
@@ -135,23 +171,24 @@ nav li{
     transition: 0.3s;
 }
 
-.mainmenu >li:hover >a,
+.mainmenu>li:hover>a,
 .email p:hover a,
 .phone p:hover a {
     color: #fd8300;
 
 }
-.navigationbottom{
+
+.navigationbottom {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     column-gap: 30px;
-        flex-wrap: wrap;
+    row-gap: 30px;
+    flex-wrap: wrap;
 }
 
 .socials {
     display: flex;
-    
-    justify-content: center;
+
     column-gap: 32px;
     align-items: center;
 }
@@ -194,44 +231,40 @@ a.inst {
 }
 
 
-.header-info{
+.header-info {
     display: flex;
     flex-direction: column;
+    row-gap: 20px;
     align-items: center;
-text-align: center;
-padding: 30px 0;
+    text-align: center;
+    padding: 30px 0;
+}
+.header-info div,
+.navigationbottom div{
+margin: auto;
 }
 
 
-.header-info img{
-    margin-bottom: 20px;
-}
-.phone {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 12px;
-}
 
+.phn{
+    position: relative;
+}
 
 a.phn:before {
     content: "";
-    display: inline-block;
-    position: relative;
-    top: 2px;
-    left: -11px;
+    position: absolute;
+    top: 0;
+    left: -30px;
     width: 19px;
     height: 21px;
     background: url(../img/icons.png), no-repeat;
     background-position: -62px 0;
 }
-.phone p:last-child a{
-    margin-left: 19px;
-}
+
+
 
 .phone a {
-  
+
     color: #25252c;
     font-size: 18px;
     font-weight: bold;
@@ -241,11 +274,13 @@ a.phn:before {
 
 }
 
-.email {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
+.phone p:first-child,
+.email p:first-child {
+    margin-bottom: 8px;
+}
+.phone p,
+.email p{
+    padding-left: 30px;
 }
 
 .email a {
@@ -255,13 +290,15 @@ a.phn:before {
     font-family: "Arial";
     transition: .3s;
 }
+.eml{
+    position: relative;
 
+}
 a.eml:before {
     content: "";
-    display: inline-block;
-    position: relative;
-    top: 2px;
-    left: -12px;
+    position: absolute;
+    top: 0;
+    left: -30px;
     width: 21px;
     height: 15px;
     background: url(../img/icons.png), no-repeat;
@@ -271,13 +308,15 @@ a.eml:before {
 a.skype {
     text-decoration: none;
 }
+.skype{
+    position: relative;
+}
 
 a.skype:before {
     content: "";
-    display: inline-block;
-    position: relative;
-    top: 5px;
-    left: -11px;
+    position: absolute;
+    top: 0;
+    left: -30px;
     width: 21px;
     height: 21px;
     background: url(../img/icons.png), no-repeat;
@@ -306,7 +345,8 @@ a.skype:before {
     padding: 43px 0 30px;
     background-color: #ededf5;
 }
-.bottommenu{
+
+.bottommenu {
     margin-bottom: 20px;
 }
 
@@ -324,6 +364,10 @@ a.skype:before {
     text-decoration: underline;
     transition: .3s;
 }
+.minw{
+    min-width: 220px;
+    text-align: center;
+}
 
 .coperate {
     padding: 16px;
@@ -339,67 +383,90 @@ a.skype:before {
 }
 
 @media screen and (min-width:600px) {
-    .email{
+    .email {
         text-align: left;
     }
-    .opened{
+
+    .opened {
         width: 50%;
     }
-   
-   
+
+
 }
+
 @media screen and (min-width:720px) {
-    .navigationbottom{
-        justify-content: space-between;
+    .wrapper {
+        width: 80%;
     }
-    .header-info{
+
+    .navigationbottom {
+        justify-content: space-between;
+
+    }
+
+    .header-info {
         display: flex;
         flex-direction: row;
         column-gap: 30px;
-        align-items: start;
-        justify-content: center;
+        row-gap: 30px;
+        align-items: center;
+        justify-content: space-between;
         flex-wrap: wrap;
 
     }
-    
+
 }
 
 @media screen and (min-width:1024px) {
-    nav li{
+
+    nav li {
         margin-bottom: 0;
     }
-    .mainmenu{
+
+    .mainmenu {
         display: flex;
         gap: 25px;
         margin: 0;
     }
-    .socials{
-        gap: 22px;
-    }
-    .burger{
+
+    .burger {
         display: none;
     }
-    .navigation{
+
+    .navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-   
-  
-    .header-info{
+
+    .header-info {
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        align-items: center;
     }
-    
-}
-@media screen and (min-width:1440px) {
-    .wrapper{
-        width: 80%;
+
+    .minw{
+        text-align: start;
+
     }
-    
+
 }
 
+@media screen and (min-width:1126px) {
+    .header-info{
+        position: relative;
+    }
+    .header-info::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 51px;
+        background: #e4e4ec;
+        top: calc(50% - 25px);
+        left: 50%;
+    }
+    .header-info div.buttoncall{
+        margin: 0;
+    }
 
-
-
+}
