@@ -28,7 +28,6 @@ sup {
 
 nav {
     text-align: center;
-    padding: 0;
     padding: 25px;
     background-color: #1f1f56;
 
@@ -107,7 +106,7 @@ span {
 .opened {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px 15px;
     width: 75%;
     position: absolute;
     top: 50px;
@@ -165,15 +164,6 @@ nav li {
 
 }
 
-.navigationbottom {
-    display: flex;
-    justify-content: center;
-    column-gap: 30px;
-    row-gap: 30px;
-    flex-wrap: wrap;
-}
-
-
 .socials {
     display: flex;
     text-align: center;
@@ -223,14 +213,21 @@ a.inst {
 }
 
 
-.header-info {
+.header-info,
+.navigationbottom {
     display: flex;
-    flex-direction: column;
     align-items: center;
     row-gap: 20px;
-    padding: 30px 0;
+    column-gap: 30px;
+justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
 }
+
+.header-info{
+    padding: 30px 0;
+}
+
 
 .header-info div,
 .navigationbottom div {
@@ -338,8 +335,12 @@ a.skype:before {
     background-color: #ededf5;
 }
 
-.bottommenu {
-    margin-bottom: 20px;
+.navigationbottom {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
 }
 
 .bottommenu a {
@@ -376,6 +377,13 @@ a.skype:before {
 }
 
 @media screen and (min-width:600px) {
+    .header-info div{
+        margin: 0;
+    }
+    .header-info,
+    .navigationbottom{
+        justify-content: space-between;
+    }
     .email {
         text-align: left;
     }
@@ -386,25 +394,11 @@ a.skype:before {
 }
 
 @media screen and (min-width:720px) {
+   
     .wrapper {
         width: 80%;
     }
 
-    .navigationbottom {
-        justify-content: space-between;
-
-    }
-
-    .header-info {
-        display: flex;
-        flex-direction: row;
-        column-gap: 30px;
-        row-gap: 30px;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-    }
 }
 
 @media screen and (min-width:1024px) {
@@ -414,9 +408,9 @@ a.skype:before {
     }
 
     .mainmenu {
-        margin: 0;
         display: flex;
         gap: 25px;
+        margin: 0;
     }
 
     .burger {
@@ -439,6 +433,9 @@ a.skype:before {
 @media screen and (min-width:1126px) {
     .header-info {
         position: relative;
+    }
+    .header-info div{
+      margin: auto;
     }
 
     .header-info::before {
